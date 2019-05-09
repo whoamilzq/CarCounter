@@ -51,20 +51,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cmbSerial = new System.Windows.Forms.ComboBox();
             this.gpEdit = new System.Windows.Forms.GroupBox();
-            this.panelNewCard = new System.Windows.Forms.Panel();
-            this.btnCardSave = new System.Windows.Forms.Button();
             this.panelLost = new System.Windows.Forms.Panel();
+            this.plbtnSearch = new System.Windows.Forms.Button();
+            this.pltbName = new System.Windows.Forms.TextBox();
             this.pllabName = new System.Windows.Forms.Label();
             this.panelMonitor = new System.Windows.Forms.Panel();
-            this.pmbtnMonitorClose = new System.Windows.Forms.Button();
-            this.pmbtnMonitorStart = new System.Windows.Forms.Button();
-            this.pmlabCount = new System.Windows.Forms.Label();
-            this.panelSearch = new System.Windows.Forms.Panel();
-            this.psbtnSearch = new System.Windows.Forms.Button();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.gbOperate = new System.Windows.Forms.GroupBox();
-            this.tvOperate = new System.Windows.Forms.TreeView();
-            this.pltbName = new System.Windows.Forms.TextBox();
+            this.pmtbCount = new System.Windows.Forms.TextBox();
+            this.pmtbIdNo = new System.Windows.Forms.TextBox();
+            this.pmlabIdNo = new System.Windows.Forms.Label();
             this.pmcmbCarType = new System.Windows.Forms.ComboBox();
             this.pmlabCarType = new System.Windows.Forms.Label();
             this.pmtbCarNo = new System.Windows.Forms.TextBox();
@@ -77,8 +71,20 @@
             this.pmlabName = new System.Windows.Forms.Label();
             this.pmcmbCardNo = new System.Windows.Forms.ComboBox();
             this.pmlabCardNO = new System.Windows.Forms.Label();
-            this.pmlabIdNo = new System.Windows.Forms.Label();
-            this.pmtbIdNo = new System.Windows.Forms.TextBox();
+            this.pmbtnMonitorClose = new System.Windows.Forms.Button();
+            this.pmbtnMonitorStart = new System.Windows.Forms.Button();
+            this.pmlabCount = new System.Windows.Forms.Label();
+            this.panelSearch = new System.Windows.Forms.Panel();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.pslabCarNo = new System.Windows.Forms.Label();
+            this.pslabName = new System.Windows.Forms.Label();
+            this.pslabIdNo = new System.Windows.Forms.Label();
+            this.pstbCardNo = new System.Windows.Forms.TextBox();
+            this.pslabCardNo = new System.Windows.Forms.Label();
+            this.psbtnSearch = new System.Windows.Forms.Button();
+            this.panelNewCard = new System.Windows.Forms.Panel();
             this.potbIdNo = new System.Windows.Forms.TextBox();
             this.polabIdNo = new System.Windows.Forms.Label();
             this.pocmbCarType = new System.Windows.Forms.ComboBox();
@@ -93,24 +99,18 @@
             this.polabName = new System.Windows.Forms.Label();
             this.poCardNo = new System.Windows.Forms.ComboBox();
             this.polabCardNo = new System.Windows.Forms.Label();
-            this.pmtbCount = new System.Windows.Forms.TextBox();
-            this.pslabCardNo = new System.Windows.Forms.Label();
-            this.pstbCardNo = new System.Windows.Forms.TextBox();
-            this.pslabIdNo = new System.Windows.Forms.Label();
-            this.pslabName = new System.Windows.Forms.Label();
-            this.pslabCarNo = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.plbtnSearch = new System.Windows.Forms.Button();
+            this.btnCardSave = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.gbOperate = new System.Windows.Forms.GroupBox();
+            this.tvOperate = new System.Windows.Forms.TreeView();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.gbSerial.SuspendLayout();
             this.gpEdit.SuspendLayout();
-            this.panelNewCard.SuspendLayout();
             this.panelLost.SuspendLayout();
             this.panelMonitor.SuspendLayout();
             this.panelSearch.SuspendLayout();
+            this.panelNewCard.SuspendLayout();
             this.gbOperate.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -277,10 +277,10 @@
             // 
             // gpEdit
             // 
-            this.gpEdit.Controls.Add(this.panelLost);
             this.gpEdit.Controls.Add(this.panelMonitor);
             this.gpEdit.Controls.Add(this.panelSearch);
             this.gpEdit.Controls.Add(this.panelNewCard);
+            this.gpEdit.Controls.Add(this.panelLost);
             this.gpEdit.Location = new System.Drawing.Point(255, 35);
             this.gpEdit.Margin = new System.Windows.Forms.Padding(4);
             this.gpEdit.Name = "gpEdit";
@@ -289,42 +289,6 @@
             this.gpEdit.TabIndex = 3;
             this.gpEdit.TabStop = false;
             this.gpEdit.Text = "编辑";
-            // 
-            // panelNewCard
-            // 
-            this.panelNewCard.Controls.Add(this.potbIdNo);
-            this.panelNewCard.Controls.Add(this.polabIdNo);
-            this.panelNewCard.Controls.Add(this.pocmbCarType);
-            this.panelNewCard.Controls.Add(this.polabCarType);
-            this.panelNewCard.Controls.Add(this.potbCarNo);
-            this.panelNewCard.Controls.Add(this.potbPhone);
-            this.panelNewCard.Controls.Add(this.polabCarNo);
-            this.panelNewCard.Controls.Add(this.polabPhone);
-            this.panelNewCard.Controls.Add(this.polabSex);
-            this.panelNewCard.Controls.Add(this.pocmbSex);
-            this.panelNewCard.Controls.Add(this.potbName);
-            this.panelNewCard.Controls.Add(this.polabName);
-            this.panelNewCard.Controls.Add(this.poCardNo);
-            this.panelNewCard.Controls.Add(this.polabCardNo);
-            this.panelNewCard.Controls.Add(this.btnCardSave);
-            this.panelNewCard.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelNewCard.Location = new System.Drawing.Point(4, 22);
-            this.panelNewCard.Margin = new System.Windows.Forms.Padding(4);
-            this.panelNewCard.Name = "panelNewCard";
-            this.panelNewCard.Size = new System.Drawing.Size(593, 459);
-            this.panelNewCard.TabIndex = 0;
-            this.panelNewCard.Visible = false;
-            // 
-            // btnCardSave
-            // 
-            this.btnCardSave.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnCardSave.Location = new System.Drawing.Point(483, 408);
-            this.btnCardSave.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCardSave.Name = "btnCardSave";
-            this.btnCardSave.Size = new System.Drawing.Size(87, 31);
-            this.btnCardSave.TabIndex = 2;
-            this.btnCardSave.Text = "保存";
-            this.btnCardSave.UseVisualStyleBackColor = true;
             // 
             // panelLost
             // 
@@ -338,6 +302,23 @@
             this.panelLost.Size = new System.Drawing.Size(593, 459);
             this.panelLost.TabIndex = 3;
             this.panelLost.Visible = false;
+            // 
+            // plbtnSearch
+            // 
+            this.plbtnSearch.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.plbtnSearch.Location = new System.Drawing.Point(490, 59);
+            this.plbtnSearch.Name = "plbtnSearch";
+            this.plbtnSearch.Size = new System.Drawing.Size(80, 31);
+            this.plbtnSearch.TabIndex = 2;
+            this.plbtnSearch.Text = "查询";
+            this.plbtnSearch.UseVisualStyleBackColor = true;
+            // 
+            // pltbName
+            // 
+            this.pltbName.Location = new System.Drawing.Point(114, 15);
+            this.pltbName.Name = "pltbName";
+            this.pltbName.Size = new System.Drawing.Size(158, 25);
+            this.pltbName.TabIndex = 1;
             // 
             // pllabName
             // 
@@ -377,107 +358,28 @@
             this.panelMonitor.TabIndex = 3;
             this.panelMonitor.Visible = false;
             // 
-            // pmbtnMonitorClose
+            // pmtbCount
             // 
-            this.pmbtnMonitorClose.Location = new System.Drawing.Point(469, 412);
-            this.pmbtnMonitorClose.Margin = new System.Windows.Forms.Padding(4);
-            this.pmbtnMonitorClose.Name = "pmbtnMonitorClose";
-            this.pmbtnMonitorClose.Size = new System.Drawing.Size(87, 31);
-            this.pmbtnMonitorClose.TabIndex = 2;
-            this.pmbtnMonitorClose.Text = "关闭监控";
-            this.pmbtnMonitorClose.UseVisualStyleBackColor = true;
+            this.pmtbCount.Location = new System.Drawing.Point(112, 316);
+            this.pmtbCount.Name = "pmtbCount";
+            this.pmtbCount.Size = new System.Drawing.Size(100, 25);
+            this.pmtbCount.TabIndex = 27;
             // 
-            // pmbtnMonitorStart
+            // pmtbIdNo
             // 
-            this.pmbtnMonitorStart.Location = new System.Drawing.Point(28, 410);
-            this.pmbtnMonitorStart.Margin = new System.Windows.Forms.Padding(4);
-            this.pmbtnMonitorStart.Name = "pmbtnMonitorStart";
-            this.pmbtnMonitorStart.Size = new System.Drawing.Size(87, 31);
-            this.pmbtnMonitorStart.TabIndex = 1;
-            this.pmbtnMonitorStart.Text = "开始监控";
-            this.pmbtnMonitorStart.UseVisualStyleBackColor = true;
+            this.pmtbIdNo.Location = new System.Drawing.Point(410, 215);
+            this.pmtbIdNo.Name = "pmtbIdNo";
+            this.pmtbIdNo.Size = new System.Drawing.Size(160, 25);
+            this.pmtbIdNo.TabIndex = 26;
             // 
-            // pmlabCount
+            // pmlabIdNo
             // 
-            this.pmlabCount.AutoSize = true;
-            this.pmlabCount.Location = new System.Drawing.Point(23, 323);
-            this.pmlabCount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.pmlabCount.Name = "pmlabCount";
-            this.pmlabCount.Size = new System.Drawing.Size(82, 15);
-            this.pmlabCount.TabIndex = 0;
-            this.pmlabCount.Text = "进出次数：";
-            // 
-            // panelSearch
-            // 
-            this.panelSearch.Controls.Add(this.textBox3);
-            this.panelSearch.Controls.Add(this.textBox2);
-            this.panelSearch.Controls.Add(this.textBox1);
-            this.panelSearch.Controls.Add(this.pslabCarNo);
-            this.panelSearch.Controls.Add(this.pslabName);
-            this.panelSearch.Controls.Add(this.pslabIdNo);
-            this.panelSearch.Controls.Add(this.pstbCardNo);
-            this.panelSearch.Controls.Add(this.pslabCardNo);
-            this.panelSearch.Controls.Add(this.psbtnSearch);
-            this.panelSearch.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelSearch.Location = new System.Drawing.Point(4, 22);
-            this.panelSearch.Margin = new System.Windows.Forms.Padding(4);
-            this.panelSearch.Name = "panelSearch";
-            this.panelSearch.Size = new System.Drawing.Size(593, 459);
-            this.panelSearch.TabIndex = 3;
-            this.panelSearch.Visible = false;
-            // 
-            // psbtnSearch
-            // 
-            this.psbtnSearch.Location = new System.Drawing.Point(483, 116);
-            this.psbtnSearch.Margin = new System.Windows.Forms.Padding(4);
-            this.psbtnSearch.Name = "psbtnSearch";
-            this.psbtnSearch.Size = new System.Drawing.Size(87, 31);
-            this.psbtnSearch.TabIndex = 0;
-            this.psbtnSearch.Text = "查询";
-            this.psbtnSearch.UseVisualStyleBackColor = true;
-            // 
-            // gbOperate
-            // 
-            this.gbOperate.Controls.Add(this.tvOperate);
-            this.gbOperate.Location = new System.Drawing.Point(16, 178);
-            this.gbOperate.Margin = new System.Windows.Forms.Padding(4);
-            this.gbOperate.Name = "gbOperate";
-            this.gbOperate.Padding = new System.Windows.Forms.Padding(4);
-            this.gbOperate.Size = new System.Drawing.Size(231, 342);
-            this.gbOperate.TabIndex = 4;
-            this.gbOperate.TabStop = false;
-            this.gbOperate.Text = "操作";
-            // 
-            // tvOperate
-            // 
-            this.tvOperate.Indent = 10;
-            this.tvOperate.ItemHeight = 20;
-            this.tvOperate.Location = new System.Drawing.Point(12, 26);
-            this.tvOperate.Margin = new System.Windows.Forms.Padding(4);
-            this.tvOperate.Name = "tvOperate";
-            treeNode1.Name = "tvnNewCard";
-            treeNode1.Text = "发卡管理";
-            treeNode2.Name = "tvnLost";
-            treeNode2.Text = "挂失";
-            treeNode3.Name = "tvnMonitor";
-            treeNode3.Text = "监控统计";
-            treeNode4.Name = "tvnSearch";
-            treeNode4.Text = "信息查询";
-            this.tvOperate.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2,
-            treeNode3,
-            treeNode4});
-            this.tvOperate.Size = new System.Drawing.Size(204, 308);
-            this.tvOperate.TabIndex = 0;
-            this.tvOperate.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
-            // 
-            // pltbName
-            // 
-            this.pltbName.Location = new System.Drawing.Point(114, 15);
-            this.pltbName.Name = "pltbName";
-            this.pltbName.Size = new System.Drawing.Size(158, 25);
-            this.pltbName.TabIndex = 1;
+            this.pmlabIdNo.AutoSize = true;
+            this.pmlabIdNo.Location = new System.Drawing.Point(325, 218);
+            this.pmlabIdNo.Name = "pmlabIdNo";
+            this.pmlabIdNo.Size = new System.Drawing.Size(82, 15);
+            this.pmlabIdNo.TabIndex = 25;
+            this.pmlabIdNo.Text = "身份证号：";
             // 
             // pmcmbCarType
             // 
@@ -580,21 +482,153 @@
             this.pmlabCardNO.TabIndex = 13;
             this.pmlabCardNO.Text = "卡    号：";
             // 
-            // pmlabIdNo
+            // pmbtnMonitorClose
             // 
-            this.pmlabIdNo.AutoSize = true;
-            this.pmlabIdNo.Location = new System.Drawing.Point(325, 218);
-            this.pmlabIdNo.Name = "pmlabIdNo";
-            this.pmlabIdNo.Size = new System.Drawing.Size(82, 15);
-            this.pmlabIdNo.TabIndex = 25;
-            this.pmlabIdNo.Text = "身份证号：";
+            this.pmbtnMonitorClose.Location = new System.Drawing.Point(469, 412);
+            this.pmbtnMonitorClose.Margin = new System.Windows.Forms.Padding(4);
+            this.pmbtnMonitorClose.Name = "pmbtnMonitorClose";
+            this.pmbtnMonitorClose.Size = new System.Drawing.Size(87, 31);
+            this.pmbtnMonitorClose.TabIndex = 2;
+            this.pmbtnMonitorClose.Text = "关闭监控";
+            this.pmbtnMonitorClose.UseVisualStyleBackColor = true;
             // 
-            // pmtbIdNo
+            // pmbtnMonitorStart
             // 
-            this.pmtbIdNo.Location = new System.Drawing.Point(410, 215);
-            this.pmtbIdNo.Name = "pmtbIdNo";
-            this.pmtbIdNo.Size = new System.Drawing.Size(160, 25);
-            this.pmtbIdNo.TabIndex = 26;
+            this.pmbtnMonitorStart.Location = new System.Drawing.Point(28, 410);
+            this.pmbtnMonitorStart.Margin = new System.Windows.Forms.Padding(4);
+            this.pmbtnMonitorStart.Name = "pmbtnMonitorStart";
+            this.pmbtnMonitorStart.Size = new System.Drawing.Size(87, 31);
+            this.pmbtnMonitorStart.TabIndex = 1;
+            this.pmbtnMonitorStart.Text = "开始监控";
+            this.pmbtnMonitorStart.UseVisualStyleBackColor = true;
+            // 
+            // pmlabCount
+            // 
+            this.pmlabCount.AutoSize = true;
+            this.pmlabCount.Location = new System.Drawing.Point(23, 323);
+            this.pmlabCount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.pmlabCount.Name = "pmlabCount";
+            this.pmlabCount.Size = new System.Drawing.Size(82, 15);
+            this.pmlabCount.TabIndex = 0;
+            this.pmlabCount.Text = "进出次数：";
+            // 
+            // panelSearch
+            // 
+            this.panelSearch.Controls.Add(this.textBox3);
+            this.panelSearch.Controls.Add(this.textBox2);
+            this.panelSearch.Controls.Add(this.textBox1);
+            this.panelSearch.Controls.Add(this.pslabCarNo);
+            this.panelSearch.Controls.Add(this.pslabName);
+            this.panelSearch.Controls.Add(this.pslabIdNo);
+            this.panelSearch.Controls.Add(this.pstbCardNo);
+            this.panelSearch.Controls.Add(this.pslabCardNo);
+            this.panelSearch.Controls.Add(this.psbtnSearch);
+            this.panelSearch.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelSearch.Location = new System.Drawing.Point(4, 22);
+            this.panelSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.panelSearch.Name = "panelSearch";
+            this.panelSearch.Size = new System.Drawing.Size(593, 459);
+            this.panelSearch.TabIndex = 3;
+            this.panelSearch.Visible = false;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(396, 65);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(174, 25);
+            this.textBox3.TabIndex = 8;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(396, 16);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(174, 25);
+            this.textBox2.TabIndex = 7;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(117, 65);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(155, 25);
+            this.textBox1.TabIndex = 6;
+            // 
+            // pslabCarNo
+            // 
+            this.pslabCarNo.AutoSize = true;
+            this.pslabCarNo.Location = new System.Drawing.Point(306, 68);
+            this.pslabCarNo.Name = "pslabCarNo";
+            this.pslabCarNo.Size = new System.Drawing.Size(83, 15);
+            this.pslabCarNo.TabIndex = 5;
+            this.pslabCarNo.Text = "车 牌 号：";
+            // 
+            // pslabName
+            // 
+            this.pslabName.AutoSize = true;
+            this.pslabName.Location = new System.Drawing.Point(303, 18);
+            this.pslabName.Name = "pslabName";
+            this.pslabName.Size = new System.Drawing.Size(84, 15);
+            this.pslabName.TabIndex = 4;
+            this.pslabName.Text = "姓    名：";
+            // 
+            // pslabIdNo
+            // 
+            this.pslabIdNo.AutoSize = true;
+            this.pslabIdNo.Location = new System.Drawing.Point(27, 68);
+            this.pslabIdNo.Name = "pslabIdNo";
+            this.pslabIdNo.Size = new System.Drawing.Size(82, 15);
+            this.pslabIdNo.TabIndex = 3;
+            this.pslabIdNo.Text = "身份证号：";
+            // 
+            // pstbCardNo
+            // 
+            this.pstbCardNo.Location = new System.Drawing.Point(117, 15);
+            this.pstbCardNo.Name = "pstbCardNo";
+            this.pstbCardNo.Size = new System.Drawing.Size(155, 25);
+            this.pstbCardNo.TabIndex = 2;
+            // 
+            // pslabCardNo
+            // 
+            this.pslabCardNo.AutoSize = true;
+            this.pslabCardNo.Location = new System.Drawing.Point(27, 18);
+            this.pslabCardNo.Name = "pslabCardNo";
+            this.pslabCardNo.Size = new System.Drawing.Size(84, 15);
+            this.pslabCardNo.TabIndex = 1;
+            this.pslabCardNo.Text = "卡    号：";
+            // 
+            // psbtnSearch
+            // 
+            this.psbtnSearch.Location = new System.Drawing.Point(483, 116);
+            this.psbtnSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.psbtnSearch.Name = "psbtnSearch";
+            this.psbtnSearch.Size = new System.Drawing.Size(87, 31);
+            this.psbtnSearch.TabIndex = 0;
+            this.psbtnSearch.Text = "查询";
+            this.psbtnSearch.UseVisualStyleBackColor = true;
+            // 
+            // panelNewCard
+            // 
+            this.panelNewCard.Controls.Add(this.potbIdNo);
+            this.panelNewCard.Controls.Add(this.polabIdNo);
+            this.panelNewCard.Controls.Add(this.pocmbCarType);
+            this.panelNewCard.Controls.Add(this.polabCarType);
+            this.panelNewCard.Controls.Add(this.potbCarNo);
+            this.panelNewCard.Controls.Add(this.potbPhone);
+            this.panelNewCard.Controls.Add(this.polabCarNo);
+            this.panelNewCard.Controls.Add(this.polabPhone);
+            this.panelNewCard.Controls.Add(this.polabSex);
+            this.panelNewCard.Controls.Add(this.pocmbSex);
+            this.panelNewCard.Controls.Add(this.potbName);
+            this.panelNewCard.Controls.Add(this.polabName);
+            this.panelNewCard.Controls.Add(this.poCardNo);
+            this.panelNewCard.Controls.Add(this.polabCardNo);
+            this.panelNewCard.Controls.Add(this.btnCardSave);
+            this.panelNewCard.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelNewCard.Location = new System.Drawing.Point(4, 22);
+            this.panelNewCard.Margin = new System.Windows.Forms.Padding(4);
+            this.panelNewCard.Name = "panelNewCard";
+            this.panelNewCard.Size = new System.Drawing.Size(593, 459);
+            this.panelNewCard.TabIndex = 0;
+            this.panelNewCard.Visible = false;
             // 
             // potbIdNo
             // 
@@ -673,6 +707,9 @@
             // pocmbSex
             // 
             this.pocmbSex.FormattingEnabled = true;
+            this.pocmbSex.Items.AddRange(new object[] {
+            "男",
+            "女"});
             this.pocmbSex.Location = new System.Drawing.Point(112, 116);
             this.pocmbSex.Name = "pocmbSex";
             this.pocmbSex.Size = new System.Drawing.Size(160, 23);
@@ -713,86 +750,52 @@
             this.polabCardNo.TabIndex = 27;
             this.polabCardNo.Text = "卡    号：";
             // 
-            // pmtbCount
+            // btnCardSave
             // 
-            this.pmtbCount.Location = new System.Drawing.Point(112, 316);
-            this.pmtbCount.Name = "pmtbCount";
-            this.pmtbCount.Size = new System.Drawing.Size(100, 25);
-            this.pmtbCount.TabIndex = 27;
+            this.btnCardSave.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnCardSave.Location = new System.Drawing.Point(483, 408);
+            this.btnCardSave.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCardSave.Name = "btnCardSave";
+            this.btnCardSave.Size = new System.Drawing.Size(87, 31);
+            this.btnCardSave.TabIndex = 2;
+            this.btnCardSave.Text = "保存";
+            this.btnCardSave.UseVisualStyleBackColor = true;
             // 
-            // pslabCardNo
+            // gbOperate
             // 
-            this.pslabCardNo.AutoSize = true;
-            this.pslabCardNo.Location = new System.Drawing.Point(27, 18);
-            this.pslabCardNo.Name = "pslabCardNo";
-            this.pslabCardNo.Size = new System.Drawing.Size(84, 15);
-            this.pslabCardNo.TabIndex = 1;
-            this.pslabCardNo.Text = "卡    号：";
+            this.gbOperate.Controls.Add(this.tvOperate);
+            this.gbOperate.Location = new System.Drawing.Point(16, 178);
+            this.gbOperate.Margin = new System.Windows.Forms.Padding(4);
+            this.gbOperate.Name = "gbOperate";
+            this.gbOperate.Padding = new System.Windows.Forms.Padding(4);
+            this.gbOperate.Size = new System.Drawing.Size(231, 342);
+            this.gbOperate.TabIndex = 4;
+            this.gbOperate.TabStop = false;
+            this.gbOperate.Text = "操作";
             // 
-            // pstbCardNo
+            // tvOperate
             // 
-            this.pstbCardNo.Location = new System.Drawing.Point(117, 15);
-            this.pstbCardNo.Name = "pstbCardNo";
-            this.pstbCardNo.Size = new System.Drawing.Size(155, 25);
-            this.pstbCardNo.TabIndex = 2;
-            // 
-            // pslabIdNo
-            // 
-            this.pslabIdNo.AutoSize = true;
-            this.pslabIdNo.Location = new System.Drawing.Point(27, 68);
-            this.pslabIdNo.Name = "pslabIdNo";
-            this.pslabIdNo.Size = new System.Drawing.Size(82, 15);
-            this.pslabIdNo.TabIndex = 3;
-            this.pslabIdNo.Text = "身份证号：";
-            // 
-            // pslabName
-            // 
-            this.pslabName.AutoSize = true;
-            this.pslabName.Location = new System.Drawing.Point(303, 18);
-            this.pslabName.Name = "pslabName";
-            this.pslabName.Size = new System.Drawing.Size(84, 15);
-            this.pslabName.TabIndex = 4;
-            this.pslabName.Text = "姓    名：";
-            // 
-            // pslabCarNo
-            // 
-            this.pslabCarNo.AutoSize = true;
-            this.pslabCarNo.Location = new System.Drawing.Point(306, 68);
-            this.pslabCarNo.Name = "pslabCarNo";
-            this.pslabCarNo.Size = new System.Drawing.Size(83, 15);
-            this.pslabCarNo.TabIndex = 5;
-            this.pslabCarNo.Text = "车 牌 号：";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(117, 65);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(155, 25);
-            this.textBox1.TabIndex = 6;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(396, 16);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(174, 25);
-            this.textBox2.TabIndex = 7;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(396, 65);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(174, 25);
-            this.textBox3.TabIndex = 8;
-            // 
-            // plbtnSearch
-            // 
-            this.plbtnSearch.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.plbtnSearch.Location = new System.Drawing.Point(490, 59);
-            this.plbtnSearch.Name = "plbtnSearch";
-            this.plbtnSearch.Size = new System.Drawing.Size(80, 31);
-            this.plbtnSearch.TabIndex = 2;
-            this.plbtnSearch.Text = "查询";
-            this.plbtnSearch.UseVisualStyleBackColor = true;
+            this.tvOperate.Indent = 10;
+            this.tvOperate.ItemHeight = 20;
+            this.tvOperate.Location = new System.Drawing.Point(12, 26);
+            this.tvOperate.Margin = new System.Windows.Forms.Padding(4);
+            this.tvOperate.Name = "tvOperate";
+            treeNode1.Name = "tvnNewCard";
+            treeNode1.Text = "发卡管理";
+            treeNode2.Name = "tvnLost";
+            treeNode2.Text = "挂失";
+            treeNode3.Name = "tvnMonitor";
+            treeNode3.Text = "监控统计";
+            treeNode4.Name = "tvnSearch";
+            treeNode4.Text = "信息查询";
+            this.tvOperate.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2,
+            treeNode3,
+            treeNode4});
+            this.tvOperate.Size = new System.Drawing.Size(204, 308);
+            this.tvOperate.TabIndex = 0;
+            this.tvOperate.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             // 
             // FormMain
             // 
@@ -823,14 +826,14 @@
             this.gbSerial.ResumeLayout(false);
             this.gbSerial.PerformLayout();
             this.gpEdit.ResumeLayout(false);
-            this.panelNewCard.ResumeLayout(false);
-            this.panelNewCard.PerformLayout();
             this.panelLost.ResumeLayout(false);
             this.panelLost.PerformLayout();
             this.panelMonitor.ResumeLayout(false);
             this.panelMonitor.PerformLayout();
             this.panelSearch.ResumeLayout(false);
             this.panelSearch.PerformLayout();
+            this.panelNewCard.ResumeLayout(false);
+            this.panelNewCard.PerformLayout();
             this.gbOperate.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
