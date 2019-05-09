@@ -19,6 +19,7 @@ namespace CarCounter
         public FormMain()
         {
             InitializeComponent();
+            Form.CheckForIllegalCrossThreadCalls = false;
         }
 
         // 加载主界面时执行
@@ -85,10 +86,26 @@ namespace CarCounter
         private void btnSerialClose_Click(object sender, EventArgs e) => closeSerial();
 
         // 获取韦根
-        private void Reader_eventWG(string data) => throw new NotImplementedException();
+        private void Reader_eventWG(string data) { }
 
         // 获取卡号
-        private void Reader_eventHex(string data) => throw new NotImplementedException();
+        private void Reader_eventHex(string data)
+        {
+            int selectedId = tvOperate.SelectedNode.Index;
+            switch (selectedId)
+            {
+                case 0:
+                    poCardNo.Text = data;
+                    break;
+                case 2:
+                    pmcmbCardNo.Text = data;
+                    break;
+                default:
+                    poCardNo.Text = null;
+                    pmcmbCardNo.Text = null;
+                    break;
+            }
+         }
 
         // TreeView选择结点事件
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
